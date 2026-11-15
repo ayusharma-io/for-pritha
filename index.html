@@ -177,6 +177,52 @@
   @keyframes noteUp{from{opacity:1;transform:translate(0,0) rotate(0)}to{opacity:0;transform:translate(var(--dx),-180px) rotate(var(--rot))}}
   .dance-line{font-family:var(--hand);font-size:34px;text-align:center;color:#fbe7e6;line-height:1.25;margin-top:30px}
 
+
+  /* ---------- proud ---------- */
+  #proud{background:linear-gradient(180deg,var(--cream),#f7ece2 50%,var(--cream))}
+  .proud-grid{display:grid;gap:34px;margin-top:50px;max-width:640px;margin-left:auto;margin-right:auto}
+  .cert{
+    position:relative;background:var(--paper);padding:40px 34px 34px;text-align:center;
+    border:1px solid #e3cfa6;outline:6px double #e3cfa6;outline-offset:-14px;
+    box-shadow:0 18px 40px rgba(94,26,45,.12);
+  }
+  .cert .label{font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+  .cert h3{font-weight:500;font-size:32px;color:var(--wine);margin:10px 0 4px;line-height:1.15}
+  .cert h3 em{color:var(--rose)}
+  .cert .line{font-style:italic;color:var(--muted);font-size:19px}
+  .cert hr{border:none;border-top:1px dashed #e3cfa6;margin:24px auto;width:70%}
+  .cert .medal{position:absolute;right:22px;top:-22px;width:58px;height:58px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#f3d58f,var(--gold) 55%,#9a7436);
+    box-shadow:0 6px 14px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;
+    color:#fff8e6;font-size:24px}
+  .ticket{
+    position:relative;display:grid;grid-template-columns:1fr 120px;color:#fbe7e6;
+    background:linear-gradient(135deg,#6b1f33,#3d1220);border-radius:14px;overflow:hidden;
+    box-shadow:0 20px 44px rgba(94,26,45,.3);
+    -webkit-mask:radial-gradient(circle 14px at calc(100% - 120px) 0,transparent 98%,#000) top/100% 51% no-repeat,
+                 radial-gradient(circle 14px at calc(100% - 120px) 100%,transparent 98%,#000) bottom/100% 51% no-repeat;
+  }
+  .ticket .main{padding:28px 26px;border-right:2px dashed rgba(251,231,230,.3);position:relative}
+  .ticket .label{font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#f0a3b2}
+  .ticket h3{font-weight:500;font-size:30px;line-height:1.1;margin:8px 0 6px;color:#fff3f1}
+  .ticket .sub{font-style:italic;font-size:18px;color:rgba(251,231,230,.8)}
+  .ticket .stub{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;text-align:center}
+  .ticket .stub .big{font-family:var(--serif);font-size:34px;font-style:italic;color:#fff3f1;line-height:1}
+  .ticket .stub .small{font-family:var(--sans);font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#f0a3b2}
+  .stamp{display:inline-block;margin-bottom:12px;transform:rotate(-5deg);border:2px solid #f0a3b2;color:#f0a3b2;
+    font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.2em;padding:4px 8px;border-radius:4px;opacity:.9}
+  .autograph{text-align:center;margin-top:10px}
+  .autograph p{font-style:italic;color:var(--muted);font-size:19px;max-width:520px;margin:0 auto}
+  .sign-btn{margin-top:18px;font-family:var(--sans);font-size:12px;letter-spacing:.25em;text-transform:uppercase;
+    background:none;border:1px solid var(--rose);color:var(--rose);border-radius:999px;padding:10px 22px;cursor:pointer}
+  .sign-btn:hover{background:var(--rose);color:#fff}
+  .sig-line{position:relative;width:260px;height:70px;margin:18px auto 0;border-bottom:1px solid var(--muted)}
+  .sig-line span{position:absolute;left:0;bottom:4px;font-family:var(--hand);font-size:52px;color:var(--wine);
+    white-space:nowrap;overflow:hidden;width:0;transition:width 1.8s steps(14,end)}
+  .sig-line.signed span{width:100%}
+  .sig-line small{position:absolute;left:0;bottom:-22px;font-family:var(--sans);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
+  @media (max-width:560px){.ticket{grid-template-columns:1fr 92px}.ticket h3{font-size:25px}.ticket .stub .big{font-size:26px}
+    .ticket{-webkit-mask:radial-gradient(circle 12px at calc(100% - 92px) 0,transparent 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 12px at calc(100% - 92px) 100%,transparent 98%,#000) bottom/100% 51% no-repeat}}
   /* ---------- compact (childhood) ---------- */
   #childhood{background:linear-gradient(180deg,var(--cream),#fce4ec 40%,#fce4ec 70%,var(--cream))}
   .compact-wrap{display:flex;flex-direction:column;align-items:center;margin:54px 0 10px;perspective:900px}
@@ -374,10 +420,52 @@
     </div>
   </section>
 
+  <!-- ========== PROUD ========== -->
+  <section id="proud">
+    <div class="wrap" style="text-align:center">
+      <span class="eyebrow reveal">Room four</span>
+      <h2 class="reveal">Things I'm <em>so proud</em> of you for</h2>
+      <p class="lede reveal">You keep doing big things quietly, like they're nothing. They're not nothing.</p>
+
+      <div class="proud-grid">
+        <div class="cert reveal">
+          <div class="medal">♪</div>
+          <span class="label">Music exam</span>
+          <h3>Passed with <em>Distinction</em></h3>
+          <p class="line">Paid for with your own scholarship money. Earned, every bit of it.</p>
+          <hr>
+          <span class="label">Grade 1 Violin</span>
+          <h3>Results: <em>pending</em></h3>
+          <p class="line">They haven't announced it yet. I don't need them to. I already know you've cleared it.</p>
+        </div>
+
+        <div class="ticket reveal">
+          <div class="main">
+            <div class="stamp">SOLD OUT</div>
+            <br><span class="label">World Music Day · Live</span>
+            <h3>The Orchestra</h3>
+            <p class="sub">featuring Pritha, on stage, in front of a sold-out house</p>
+          </div>
+          <div class="stub">
+            <span class="small">admit</span>
+            <span class="big">one</span>
+            <span class="small">(couldn't afford it)</span>
+          </div>
+        </div>
+
+        <div class="autograph reveal">
+          <p>The tickets were so expensive I couldn't get one. So the least you can do is this:</p>
+          <button class="sign-btn" id="signBtn">autograph, please?</button>
+          <div class="sig-line" id="sigLine"><span>Pritha ♡</span><small>your biggest fan</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== IV. CHILDHOOD ========== -->
   <section id="childhood">
     <div class="wrap" style="text-align:center">
-      <span class="eyebrow reveal">Room four</span>
+      <span class="eyebrow reveal">Room five</span>
       <h2 class="reveal">A little piece of <em>childhood</em></h2>
       <p class="reveal">You once told me about a little makeup box you had when you were small, one of the most precious things you owned. It didn't make it all the way out of childhood with you.</p>
       <p class="reveal">I couldn't stop thinking about that.</p>
@@ -415,7 +503,7 @@
   <!-- ========== V. HARMONICA ========== -->
   <section id="harmonica">
     <div class="wrap" style="text-align:center">
-      <span class="eyebrow reveal">Room five</span>
+      <span class="eyebrow reveal">Room six</span>
       <h2 class="reveal">A melody <em>yet to be played</em></h2>
       <p class="reveal">You've wanted a harmonica for so long. So here it is, finally, and it's yours.</p>
       <p class="reveal">Try this one first. Tap the holes.</p>
@@ -450,7 +538,7 @@
   <!-- ========== VI. LETTER ========== -->
   <section id="letter">
     <div class="wrap" style="text-align:center">
-      <span class="eyebrow reveal">Room six</span>
+      <span class="eyebrow reveal">Room seven</span>
       <h2 class="reveal">Something I've been <em>meaning to say</em></h2>
     </div>
     <div class="env-wrap reveal" id="envWrap">
@@ -641,6 +729,16 @@ function lightStage(e){
 stage.addEventListener('click', lightStage);
 stage.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); lightStage(); } });
 
+
+// autograph
+document.getElementById('signBtn').addEventListener('click', e => {
+  const line = document.getElementById('sigLine');
+  if (line.classList.contains('signed')) return;
+  line.classList.add('signed');
+  e.target.textContent = 'thank you, star';
+  const r = line.getBoundingClientRect();
+  setTimeout(() => burstHearts(r.left + r.width/2, r.top + 20, 14), 1700);
+});
 // compact
 const compact = document.getElementById('compact');
 compact.addEventListener('click', () => {
